@@ -1,5 +1,10 @@
 name: Test Project
-on: [push, workflow_dispatch]
+on:
+  pull_request:
+    types: opened
+  push:
+    branches:
+      - master
 jobs:
   test:
     runs-on: ubuntu-latest
