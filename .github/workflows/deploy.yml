@@ -4,6 +4,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Output event data
+        run: echo "${{ toJSON(github.event) }}"
       - name: Get code
         uses: actions/checkout@v5
       - name: Install Nodejs
